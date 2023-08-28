@@ -1,0 +1,17 @@
+[project]
+name = "atumm-core"
+version = "0.1.0"
+description = "Type definitions and core of atumm services"
+authors = [
+    {name = "Omars", email = "omar@atumm.org"},
+]
+dependencies = [
+    "pydantic[email]>=2.3.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
