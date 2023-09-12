@@ -1,8 +1,7 @@
 from typing import Dict, List, Optional, Tuple
 
-from pydantic import BaseModel
-
 from atumm.core.exceptions import RuntimeException
+from pydantic import BaseModel
 
 
 class ExceptionDetailResponse(BaseModel):

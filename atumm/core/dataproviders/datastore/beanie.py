@@ -1,9 +1,8 @@
 from abc import ABC
 from typing import Generic, TypeVar
 
-from beanie import Document
-
 from atumm.core.dataproviders import DataProvider
+from beanie import Document
 
 DocumentType = TypeVar("DocumentType", bound=Document)
 
