@@ -24,7 +24,7 @@ def create_resource(service_name: str, resource_name: str):
     """
     Create a new REST resource with the given service and resource names.
     """
-    base_path = f"atumm/services/{service_name}/entrypoints/rest/{resource_name}"
+    base_path = f"thisapp/services/{service_name}/entrypoints/rest/{resource_name}"
 
     modules = [
         (
