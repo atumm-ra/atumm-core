@@ -48,7 +48,7 @@ def create_service(service_name: str):
     """
     Create a new service with the given service name.
     """
-    base_path = f"atumm/services/{service_name}"
+    base_path = f"thisapp/services/{service_name}"
 
     modules = [
         ("dataproviders/beanie", ["models.py", "repositories.py"]),
