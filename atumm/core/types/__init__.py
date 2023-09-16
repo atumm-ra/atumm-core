@@ -13,6 +13,13 @@ class AsyncContextManager(ABC):
     
     @abstractmethod
     async def __aexit__(self, exc_type: Optional[Type[BaseException]], exc_value: Optional[BaseException], traceback: Any) -> None: pass
+    
+    @classmethod
+    def __subclasshook__(cls, C):
+        if cls is AbstractAsyncContextManager:
+            return _collections_abc._check_methods(C, "__aenter__",
+                                                   "__aexit__")
+        return NotImplemented
 
 
 class SyncContextManager(ABC):
