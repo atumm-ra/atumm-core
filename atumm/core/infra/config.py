@@ -3,13 +3,13 @@ from __future__ import annotations
 from collections import UserDict
 from typing import Any
 
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Config(BaseSettings):
     @classmethod
     def create_from_env_file(cls, filename: str = ".env") -> Config:
-        return cls(_env_file=filename)
+        return cls(_env_file=filename, env_file_encoding='utf-8')
 
 
 class Configure:
