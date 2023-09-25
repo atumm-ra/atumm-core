@@ -4,16 +4,6 @@ from typing import Any, Optional, Type
 from .presenters import AbstractPresenter
 from .usecases import Command, CommandUseCase, Query, QueryUseCase
 
-__all__ = [
-    "Command",
-    "CommandUseCase",
-    "Query",
-    "QueryUseCase",
-    "AsyncContextManager",
-    "SyncContextManager",
-    "AbstractPresenter",
-]
-
 
 class AsyncContextManager(ABC):
     @abstractmethod
@@ -29,12 +19,6 @@ class AsyncContextManager(ABC):
     ) -> None:
         pass
 
-    @classmethod
-    def __subclasshook__(cls, C):
-        if cls is AbstractAsyncContextManager:
-            return _collections_abc._check_methods(C, "__aenter__", "__aexit__")
-        return NotImplemented
-
 
 class SyncContextManager(ABC):
     @abstractmethod
@@ -49,3 +33,14 @@ class SyncContextManager(ABC):
         traceback: Any,
     ) -> None:
         pass
+
+
+__all__ = [
+    "Command",
+    "CommandUseCase",
+    "Query",
+    "QueryUseCase",
+    "AsyncContextManager",
+    "SyncContextManager",
+    "AbstractPresenter",
+]
