@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any, Optional, Type
 
+from .dataproviders import DataProvider
 from .presenters import AbstractPresenter
 from .usecases import Command, CommandUseCase, Query, QueryUseCase
-from .dataproviders import DataProvider
 
 
 class AsyncContextManager(ABC):
