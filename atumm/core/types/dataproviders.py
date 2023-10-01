@@ -1,5 +1,5 @@
-from abc import ABC
+from typing import Protocol
 
-
-class DataProvider(ABC):
+# todo: revisit as its obsolete
+class DataProvider(Protocol):
     pass
