@@ -32,7 +32,6 @@ def create_resource(service_name: str, resource_name: str):
             [
                 "controllers.py",
                 "presenters.py",
-                "requests.py",
                 "responses.py",
                 "routers.py",
             ],
@@ -52,6 +51,7 @@ def create_service(service_name: str):
 
     modules = [
         ("dataproviders/beanie", ["models.py", "repositories.py"]),
+        ("dataproviders/alchemy", ["models.py", "repositories.py"]),
         ("domain", ["models.py", "repositories.py", "exceptions.py"]),
         ("domain/usecases", []),
         ("entrypoints", []),
