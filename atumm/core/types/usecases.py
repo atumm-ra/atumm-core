@@ -25,8 +25,18 @@ class CommandUseCase(UseCase, Generic[CommandType]):
     async def execute(self, command: CommandType):
         pass
 
+class CommandUseCaseSync(UseCase, Generic[CommandType]):
+    @abstractmethod
+    def execute(self, command: CommandType):
+        pass
+
 
 class QueryUseCase(UseCase, Generic[QueryType]):
     @abstractmethod
     async def execute(self, query: QueryType):
+        pass
+
+class QueryUseCaseSync(UseCase, Generic[QueryType]):
+    @abstractmethod
+    def execute(self, query: QueryType):
         pass
